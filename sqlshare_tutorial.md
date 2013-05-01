@@ -1,4 +1,8 @@
-# SQLShare tutorial
+---
+title: SQLShare GeoMICS tutorial
+---
+
+# SQLShare GeoMICS tutorial
 
 ## Logging into SQLShare
 
