@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <style>
 *{margin:0;padding:0;}
 body {
@@ -95,11 +95,11 @@ sup {
 	}
 }
 </style>
-<title>SQLShare tutorial</title>
+<title>SQLShare GeoMICS tutorial</title>
 
 </head>
 <body>
-<h1>SQLShare tutorial</h1>
+<h1>SQLShare GeoMICS tutorial</h1>
 
 <h2>Logging into SQLShare</h2>
 
@@ -111,15 +111,6 @@ sup {
 </ol>
 
 
-<h2>Finding datasets in SQLShare</h2>
-
-<ul>
-<li>Filtering your datasets by keyword</li>
-<li>Searching by tag</li>
-<li>Looking at all recent datasets</li>
-</ul>
-
-
 <h2>Uploading data</h2>
 
 <p>If the dataset you want to process is not already in SQLShare, you need to upload it.</p>
@@ -127,7 +118,12 @@ sup {
 <h3>Preparing the data</h3>
 
 <ul>
-<li>Start with <a href="http://armbrustlab.ocean.washington.edu/people/ribalet">Francois</a>' template Excel spreadsheet, which you can download by <a href="GeoMICS_data.csv">clicking here</a>.</li>
+<li>Start with <a href="http://armbrustlab.ocean.washington.edu/people/ribalet">Francois</a>' template Excel spreadsheet, which you can download by <a href="GeoMICS_data.csv">clicking here</a>.
+
+<ul>
+<li>Some browsers automatically visualize the spreadsheet instead of downloading the file. In this case, right-click <a href="GeoMICS_data.csv">the link</a> and <code>Save as</code> or <code>Download link as</code>.</li>
+</ul>
+</li>
 <li>Fill in your data in the CSV file.</li>
 <li>Column names should be descriptive, should include units, and, if possible, you should avoid special characters such as square brackets: <code>[ ]</code> and math symbols: <code>+ - %</code>.</li>
 <li>Rename the file from <code>GeoMICS_data.csv</code> to something descriptive and identifying (and unique), for example <code>Ribalet_SeaFlow_growth_rate_v3.csv</code>.</li>
@@ -156,15 +152,19 @@ sup {
 
 <p>The easiest way to find datasets in SQLShare is through the keyword search at the top right, labeled <code>Filter by keyword</code>. Note that this search will search in: the <code>filename</code>, the <code>description</code>, and the <code>tags</code> -- which is why you should choose these carefully when uploading data. <img src="img/keyword_search.png" alt="Keyword search" /></p>
 
+<h2>Getting back to your home page</h2>
+
+<p>If you want to get back to the "home page" in SQLShare, simply click the <code>Your datasets</code> link at the top left of the page.</p>
+
 <h2>Querying the data in SQLShare</h2>
 
 <p>Here is a list of example analyses conducted using the GeoMICS datasets in SQLShare. We hope that these will serve as templates that you can use to write your own queries.</p>
 
 <h3>Example: Analyzing protein function</h3>
 
-<p><a href="http://morrislab.ocean.washington.edu/?q=RobertMorris">Bob Morris</a> uploaded datasets that analyzed protein expression in the surface water at the -omics stations. You can see these data by viewing the dataset here: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation">[fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]</a>.</p>
+<p><a href="http://morrislab.ocean.washington.edu/?q=RobertMorris">Bob Morris</a> uploaded datasets that analyzed protein expression in the surface water at the -omics stations. You can see these data by viewing the dataset here: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation">[fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]</a>. You could also find this dataset by searching for <code>protein</code> or <code>CAMERA</code> as described above.</p>
 
-<p>Bob wanted to find the <strong>most commonly expressed protein functions</strong>. In this dataset, the <code>spectra_counts</code> column indicates the number of times each protein was found, and the <code>Function_1</code> column indicates the most popular function attributed to those proteins (from the XXX database).</p>
+<p>Suppose that we want to find the <strong>most commonly expressed protein functions</strong>. In Bob's dataset, the <code>spectra_counts</code> column indicates the number of times each protein was found, and the <code>Function_1</code> column indicates the most popular function attributed to those proteins.</p>
 
 <p>To describe the computation in English: For each unique function (from the <code>Function_1</code> column), we want to add up the corresponding spectra counts (<code>spectra_counts</code>). The SQL translation of this query is as follows:</p>
 
@@ -210,7 +210,13 @@ ORDER BY Spectra DESC
 <p>A common task (and indeed, one of the big features of SQLShare!) is merging data in different datasets together. Here is an example task from Jagruti Vedamati: <strong><em>I want to look at O2 data along with the total dissolved and particulate metals</em></strong>.</p>
 
 <ol>
-<li>Find the relevant datasets: Using the <code>Filter dataset by keyword</code> box described earlier, search for <code>O2</code> and <code>metals</code>, and inspect the resulting datasets. You will find the oxygen data in <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_O2_measurements_final.csv">[fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv]</a> and Jagruti's metals data at <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv">[fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv]</a>.</li>
+<li>Find the relevant datasets: Using the <code>Filter dataset by keyword</code> box described earlier, search for <code>O2</code> (to find the oxygen data) and <code>metals</code> (to find the metals data), and inspect the resulting datasets. Note that these searches work because these datasets have well-chosen names, descriptions, and tags. You should find:
+
+<ul>
+<li>Oxygen data: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_O2_measurements_final.csv">[fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv]</a></li>
+<li>Metals data: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv">[fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv]</a></li>
+</ul>
+</li>
 <li>Figure out how the two datasets can be matched up. Usually we want to take samples at the same <code>Station</code> and <code>Depth</code>, or <code>Event</code> when these are not available.</li>
 <li><p>The SQL command to merge datasets is called <code>JOIN</code>. It can be used as follows:</p>
 
@@ -224,7 +230,7 @@ JOIN [fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv] oxyge
 There are a few interesting parts of this statement:
 
 <ol type="a">
-<li>Whereas before we explicitly listed which columns we wanted (<code>Function_1</code> and <code>Spectra</code>), this time we use <code>SELECT *</code> as shorthand to mean all columns in both datasets.</li>
+<li>In the previous example, we explicitly listed which columns we wanted (<code>Function_1</code> and <code>Spectra</code>). In this example, <code>SELECT *</code> means select all columns in both datasets.</li>
 <li>We can give the individual datasets a shorter name (<code>metals</code> and <code>oxygen</code> in this example) so that we don't have to type the full <code>[fridayharboroceanographers@gmail.com].[long_dataset_name]</code> every time.</li>
 <li>We say that we want to <code>JOIN</code> datasets <code>ON</code> a particular condition. In other words, we take the pairs of rows (one from the <code>metals</code> dataset and one from the <code>oxygen</code> dataset) where the <code>ON</code> condition is true.
 

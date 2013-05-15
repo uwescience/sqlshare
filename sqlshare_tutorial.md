@@ -1,7 +1,3 @@
----
-title: SQLShare GeoMICS tutorial
----
-
 # SQLShare GeoMICS tutorial
 
 ## Logging into SQLShare
@@ -11,18 +7,13 @@ title: SQLShare GeoMICS tutorial
 3. Sign in using the `FridayHarborOceanographers@gmail.com` username and with the password that Ginger sent you.
 4. If successful, you should see the main SQLShare page with the list of the most recently modified datasets. ![Your datasets on SQLShare](img/your_datasets.png)
 
-## Finding datasets in SQLShare
-
-* Filtering your datasets by keyword
-* Searching by tag
-* Looking at all recent datasets
-
 ## Uploading data
 
 If the dataset you want to process is not already in SQLShare, you need to upload it.
 
 ### Preparing the data
 * Start with [Francois](http://armbrustlab.ocean.washington.edu/people/ribalet)' template Excel spreadsheet, which you can download by [clicking here](GeoMICS_data.csv).
+  * Some browsers automatically visualize the spreadsheet instead of downloading the file. In this case, right-click [the link](GeoMICS_data.csv) and `Save as` or `Download link as`.
 * Fill in your data in the CSV file.
 * Column names should be descriptive, should include units, and, if possible, you should avoid special characters such as square brackets: `[ ]` and math symbols: `+ - %`.
 * Rename the file from `GeoMICS_data.csv` to something descriptive and identifying (and unique), for example `Ribalet_SeaFlow_growth_rate_v3.csv`.
@@ -41,15 +32,19 @@ If the dataset you want to process is not already in SQLShare, you need to uploa
 
 The easiest way to find datasets in SQLShare is through the keyword search at the top right, labeled `Filter by keyword`. Note that this search will search in: the `filename`, the `description`, and the `tags` -- which is why you should choose these carefully when uploading data. ![Keyword search](img/keyword_search.png)
 
+## Getting back to your home page
+
+If you want to get back to the "home page" in SQLShare, simply click the `Your datasets` link at the top left of the page.
+
 ## Querying the data in SQLShare
 
 Here is a list of example analyses conducted using the GeoMICS datasets in SQLShare. We hope that these will serve as templates that you can use to write your own queries.
 
 ### Example: Analyzing protein function
 
-[Bob Morris](http://morrislab.ocean.washington.edu/?q=RobertMorris) uploaded datasets that analyzed protein expression in the surface water at the -omics stations. You can see these data by viewing the dataset here: [[fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation).
+[Bob Morris](http://morrislab.ocean.washington.edu/?q=RobertMorris) uploaded datasets that analyzed protein expression in the surface water at the -omics stations. You can see these data by viewing the dataset here: [[fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation). You could also find this dataset by searching for `protein` or `CAMERA` as described above.
 
-Bob wanted to find the **most commonly expressed protein functions**. In this dataset, the `spectra_counts` column indicates the number of times each protein was found, and the `Function_1` column indicates the most popular function attributed to those proteins (from the XXX database).
+Suppose that we want to find the **most commonly expressed protein functions**. In Bob's dataset, the `spectra_counts` column indicates the number of times each protein was found, and the `Function_1` column indicates the most popular function attributed to those proteins.
 
 To describe the computation in English: For each unique function (from the `Function_1` column), we want to add up the corresponding spectra counts (`spectra_counts`). The SQL translation of this query is as follows:
 
@@ -80,7 +75,9 @@ The `GROUP BY Function_1` part of this query says that for each unique value of 
 
 A common task (and indeed, one of the big features of SQLShare!) is merging data in different datasets together. Here is an example task from Jagruti Vedamati: **_I want to look at O2 data along with the total dissolved and particulate metals_**.
 
-1. Find the relevant datasets: Using the `Filter dataset by keyword` box described earlier, search for `O2` and `metals`, and inspect the resulting datasets. You will find the oxygen data in [[fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_O2_measurements_final.csv) and Jagruti's metals data at [[fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv).
+1. Find the relevant datasets: Using the `Filter dataset by keyword` box described earlier, search for `O2` (to find the oxygen data) and `metals` (to find the metals data), and inspect the resulting datasets. Note that these searches work because these datasets have well-chosen names, descriptions, and tags. You should find:
+   * Oxygen data: [[fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_O2_measurements_final.csv)
+   * Metals data: [[fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv)
 2. Figure out how the two datasets can be matched up. Usually we want to take samples at the same `Station` and `Depth`, or `Event` when these are not available.
 3. The SQL command to merge datasets is called `JOIN`. It can be used as follows:
 
@@ -91,7 +88,7 @@ A common task (and indeed, one of the big features of SQLShare!) is merging data
              AND metals.[Depth..m.] = oxygen.[Depth])
    
    There are a few interesting parts of this statement:
-   a. Whereas before we explicitly listed which columns we wanted (`Function_1` and `Spectra`), this time we use `SELECT *` as shorthand to mean all columns in both datasets.
+   a. In the previous example, we explicitly listed which columns we wanted (`Function_1` and `Spectra`). In this example, `SELECT *` means select all columns in both datasets.
    b. We can give the individual datasets a shorter name (`metals` and `oxygen` in this example) so that we don't have to type the full `[fridayharboroceanographers@gmail.com].[long_dataset_name]` every time.
    c. We say that we want to `JOIN` datasets `ON` a particular condition. In other words, we take the pairs of rows (one from the `metals` dataset and one from the `oxygen` dataset) where the `ON` condition is true.
       1. In this case, we require them to match **exactly** in both _Station_ (`metals.[Station] = oxygen.[station]`) and _Depth_ (`metals.[Depth..m.] = oxygen.[Depth]`).
