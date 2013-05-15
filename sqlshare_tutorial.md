@@ -59,16 +59,19 @@ The `GROUP BY Function_1` part of this query says that for each unique value of 
 1. First select [Bob's original dataset](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation). 
 2. Then click the `Derive dataset` button.
 3. Enter the query in the `DERIVE` panel, and click `Execute query`.
-   a. If you made any typos, or SQLShare experienced an error trying to compute the result, you will see an Error message below. In this case, we mistyped the `Function_1` column name. ![Query error](img/query_error.png)
+   a. If you made any typos, or SQLShare experienced an error trying to compute the result, you will see an Error message below. In this case, we mistyped the `Function_1` column name.
+      ![Query error](img/query_error.png)
 4. When the query executes successfully, you will see a preview of the result.
-   a. By default, SQLShare sorts by the first column, so in this case we will see a blank cell (for a missing function group) at the first row.  ![Query error](img/query_answer.png)
+   a. By default, SQLShare sorts by the first column, so in this case we will see a blank cell (for a missing function group) at the first row.
+      ![Query answer](img/query_answer.png)
    b. You may want to sort the values in the dataset differently, e.g., to find the most abundant protein functions first. You can sort the output using the `ORDER BY` statement, e.g., `ORDER BY Spectra DESC`. Here, `DESC` means "in descending order"; you can also use `ASC` for ascending order. Here is the final SQL query:
    
           SELECT Function_1, SUM(spectra_counts) AS Spectra
           FROM [fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]
           GROUP BY Function_1
           ORDER BY Spectra DESC
-      ![Query error](img/query_answer_sorted.png)
+
+      ![Query answer sorted](img/query_answer_sorted.png)
 5. Click on `Create new dataset` to save this result. As before, please give the new dataset an informative `Name`, `Description`, and `Tags`. Always include the `geomics` tag. Then you can save the result and a new dataset will be created. You can see the result by clicking [here](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Protein_Function_Example).
 
 ## Joining datasets together
@@ -99,3 +102,6 @@ A common task (and indeed, one of the big features of SQLShare!) is merging data
 You can see the joined Oxygen and Metals dataset here: [[fridayharboroceanographers@gmail.com].[Metals_and_Oxygen]](https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Metals_and_Oxygen).
 
 ## Troubleshooting
+We will fill this in as the questions come.
+
+Please mail [Daniel Halperin <dhalperi@escience.uw.edu>](mailto:Daniel Halperin <dhalperi@escience.uw.edu>) when you have issues or successes! :)

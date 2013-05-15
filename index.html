@@ -183,13 +183,15 @@ GROUP BY Function_1
 <li>Enter the query in the <code>DERIVE</code> panel, and click <code>Execute query</code>.
 
 <ol type="a">
-<li>If you made any typos, or SQLShare experienced an error trying to compute the result, you will see an Error message below. In this case, we mistyped the <code>Function_1</code> column name. <img src="img/query_error.png" alt="Query error" /></li>
+<li>If you made any typos, or SQLShare experienced an error trying to compute the result, you will see an Error message below. In this case, we mistyped the <code>Function_1</code> column name.
+<img src="img/query_error.png" alt="Query error" /></li>
 </ol>
 </li>
 <li>When the query executes successfully, you will see a preview of the result.
 
 <ol type="a">
-<li>By default, SQLShare sorts by the first column, so in this case we will see a blank cell (for a missing function group) at the first row.  <img src="img/query_answer.png" alt="Query error" /></li>
+<li>By default, SQLShare sorts by the first column, so in this case we will see a blank cell (for a missing function group) at the first row.
+<img src="img/query_answer.png" alt="Query answer" /></li>
 <li><p>You may want to sort the values in the dataset differently, e.g., to find the most abundant protein functions first. You can sort the output using the <code>ORDER BY</code> statement, e.g., <code>ORDER BY Spectra DESC</code>. Here, <code>DESC</code> means "in descending order"; you can also use <code>ASC</code> for ascending order. Here is the final SQL query:</p>
 
 <pre><code>SELECT Function_1, SUM(spectra_counts) AS Spectra
@@ -198,7 +200,7 @@ GROUP BY Function_1
 ORDER BY Spectra DESC
 </code></pre>
 
-<p><img src="img/query_answer_sorted.png" alt="Query error" /></p></li>
+<p><img src="img/query_answer_sorted.png" alt="Query answer sorted" /></p></li>
 </ol>
 </li>
 <li>Click on <code>Create new dataset</code> to save this result. As before, please give the new dataset an informative <code>Name</code>, <code>Description</code>, and <code>Tags</code>. Always include the <code>geomics</code> tag. Then you can save the result and a new dataset will be created. You can see the result by clicking <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Protein_Function_Example">here</a>.</li>
@@ -249,5 +251,9 @@ There are a few interesting parts of this statement:
 <p>You can see the joined Oxygen and Metals dataset here: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Metals_and_Oxygen">[fridayharboroceanographers@gmail.com].[Metals_and_Oxygen]</a>.</p>
 
 <h2>Troubleshooting</h2>
+
+<p>We will fill this in as the questions come.</p>
+
+<p>Please mail <a href="mailto:Daniel%20Halperin%20&lt;dhalperi@escience.uw.edu>">Daniel Halperin &lt;dhalperi@escience.uw.edu></a> when you have issues or successes! :)</p>
 </body>
 </html>
