@@ -104,4 +104,4 @@ You can see the joined Oxygen and Metals dataset here: [[fridayharboroceanograph
 ## Troubleshooting
 We will fill this in as the questions come.
 
-Please mail [Daniel Halperin <dhalperi@escience.uw.edu>](mailto:Daniel Halperin <dhalperi@escience.uw.edu>) when you have issues or successes! :)
+Please mail [Daniel Halperin <dhalperi@escience.washington.edu>](mailto:Daniel Halperin <dhalperi@escience.washington.edu>) when you have issues or successes! :)
