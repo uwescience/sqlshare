@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+*{margin:0;padding:0;}
+body {
+	font:13.34px helvetica,arial,freesans,clean,sans-serif;
+	color:black;
+	line-height:1.4em;
+	background-color: #F8F8F8;
+	padding: 0.7em;
+}
+p {
+	margin:1em 0;
+	line-height:1.5em;
+}
+table {
+	font-size:inherit;
+	font:100%;
+	margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	font-size:12px;
+	background-color:#eee;
+	border:none;
+}
+code {
+	font-size:12px;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>SQLShare GeoMICS tutorial</title>
+
+</head>
+<body>
+<h1>SQLShare GeoMICS tutorial</h1>
+
+<h2>Logging into SQLShare</h2>
+
+<ol>
+<li>Visit the <a href="https://sqlshare.escience.washington.edu">SQLShare website</a>.</li>
+<li>Select login using the Google account button. <img src="img/login_page.png" alt="SQLShare login page" /></li>
+<li>Sign in using the <code>FridayHarborOceanographers@gmail.com</code> username and with the password that Ginger sent you.</li>
+<li>If successful, you should see the main SQLShare page with the list of the most recently modified datasets. <img src="img/your_datasets.png" alt="Your datasets on SQLShare" /></li>
+</ol>
+
+
+<h2>Uploading data</h2>
+
+<p>If the dataset you want to process is not already in SQLShare, you need to upload it.</p>
+
+<h3>Preparing the data</h3>
+
+<ul>
+<li>Start with <a href="http://armbrustlab.ocean.washington.edu/people/ribalet">Francois</a>' template Excel spreadsheet, which you can download by <a href="GeoMICS_data.csv">clicking here</a>.
+
+<ul>
+<li>Some browsers automatically visualize the spreadsheet instead of downloading the file. In this case, right-click <a href="GeoMICS_data.csv">the link</a> and <code>Save as</code> or <code>Download link as</code>.</li>
+</ul>
+</li>
+<li>Fill in your data in the CSV file.</li>
+<li>Column names should be descriptive, should include units, and, if possible, you should avoid special characters such as square brackets: <code>[ ]</code> and math symbols: <code>+ - %</code>.</li>
+<li>Rename the file from <code>GeoMICS_data.csv</code> to something descriptive and identifying (and unique), for example <code>Ribalet_SeaFlow_growth_rate_v3.csv</code>.</li>
+</ul>
+
+
+<h3>Uploading the data through SQLShare</h3>
+
+<ul>
+<li>Click the <code>Upload dataset</code> button on the left side of the page.</li>
+<li>In <strong>Step 1</strong>, click <code>Select File</code> and choose the renamed CSV file which contains your data (<code>Ribalet_SeaFlow_growth_rate_v3.csv</code> in our example). <img src="img/upload.png" alt="Uploading data" /></li>
+<li>In <strong>Step 2</strong>, you will see a preview of the dataset. If it parsed correctly and you have followed our instructions you should not need to do anything here. Just click <code>Next</code> at the bottom right.</li>
+<li>In <strong>Step 3</strong>, you will be asked to describe your dataset and add tags.
+
+<ul>
+<li><em>Description</em>: Please provide a brief one-sentence description of what the dataset contains. Then add keywords that will be useful in searching for this dataset, e.g., <code>iron</code>, <code>DOC</code>, <code>nutrients</code>, <code>protein</code>, etc.</li>
+<li><em>Tags</em>: At a minimum add the tag <code>geomics</code> so that this dataset is part of the <code>geomics</code> collection on SQLShare. Please also choose one of: <code>organic</code>, <code>inorganic</code>, <code>omics</code>, and <code>underway</code>. You can also add keywords as tags as you feel appropriate.</li>
+<li><em>Share this dataset with everyone - (Public or Private?)</em>: You can also select whether this data should be globally public on SQLShare, or private. For now, most GeoMICS participants have opted to make their datasets shared only with the GeoMICS team (<em>uncheck the box</em>).</li>
+<li>Finally, click <code>Save</code> at the bottom right. <img src="img/upload_step_3.png" alt="Uploading data" /></li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Finding existing datasets</h2>
+
+<p>The easiest way to find datasets in SQLShare is through the keyword search at the top right, labeled <code>Filter by keyword</code>. Note that this search will search in: the <code>filename</code>, the <code>description</code>, and the <code>tags</code> -- which is why you should choose these carefully when uploading data. <img src="img/keyword_search.png" alt="Keyword search" /></p>
+
+<h2>Getting back to your home page</h2>
+
+<p>If you want to get back to the "home page" in SQLShare, simply click the <code>Your datasets</code> link at the top left of the page.</p>
+
+<h2>Querying the data in SQLShare</h2>
+
+<p>Here is a list of example analyses conducted using the GeoMICS datasets in SQLShare. We hope that these will serve as templates that you can use to write your own queries.</p>
+
+<h3>Example: Analyzing protein function</h3>
+
+<p><a href="http://morrislab.ocean.washington.edu/?q=RobertMorris">Bob Morris</a> uploaded datasets that analyzed protein expression in the surface water at the -omics stations. You can see these data by viewing the dataset here: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation">[fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]</a>. You could also find this dataset by searching for <code>protein</code> or <code>CAMERA</code> as described above.</p>
+
+<p>Suppose that we want to find the <strong>most commonly expressed protein functions</strong>. In Bob's dataset, the <code>spectra_counts</code> column indicates the number of times each protein was found, and the <code>Function_1</code> column indicates the most popular function attributed to those proteins.</p>
+
+<p>To describe the computation in English: For each unique function (from the <code>Function_1</code> column), we want to add up the corresponding spectra counts (<code>spectra_counts</code>). The SQL translation of this query is as follows:</p>
+
+<pre><code>SELECT Function_1, SUM(spectra_counts) AS Spectra
+FROM [fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]
+GROUP BY Function_1
+</code></pre>
+
+<p>The <code>GROUP BY Function_1</code> part of this query says that for each unique value of <code>Function_1</code>, SQLShare will create a new group of measurements. Within each group, the <code>SUM(spectra_counts) AS Spectra</code> shows that we will add up all the spectra counts within each group, and name the resulting sum <code>Spectra</code>. Finally, the <code>FROM</code> part of the query identifies which dataset this query will analyze.</p>
+
+<h4>To create a dataset using this query in the SQLShare interface:</h4>
+
+<ol>
+<li>First select <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/LineP_CAMERA_annotation">Bob's original dataset</a>.</li>
+<li>Then click the <code>Derive dataset</code> button.</li>
+<li>Enter the query in the <code>DERIVE</code> panel, and click <code>Execute query</code>.
+
+<ol type="a">
+<li>If you made any typos, or SQLShare experienced an error trying to compute the result, you will see an Error message below. In this case, we mistyped the <code>Function_1</code> column name.
+<img src="img/query_error.png" alt="Query error" /></li>
+</ol>
+</li>
+<li>When the query executes successfully, you will see a preview of the result.
+
+<ol type="a">
+<li>By default, SQLShare sorts by the first column, so in this case we will see a blank cell (for a missing function group) at the first row.
+<img src="img/query_answer.png" alt="Query answer" /></li>
+<li><p>You may want to sort the values in the dataset differently, e.g., to find the most abundant protein functions first. You can sort the output using the <code>ORDER BY</code> statement, e.g., <code>ORDER BY Spectra DESC</code>. Here, <code>DESC</code> means "in descending order"; you can also use <code>ASC</code> for ascending order. Here is the final SQL query:</p>
+
+<pre><code>SELECT Function_1, SUM(spectra_counts) AS Spectra
+FROM [fridayharboroceanographers@gmail.com].[LineP_CAMERA_annotation]
+GROUP BY Function_1
+ORDER BY Spectra DESC
+</code></pre>
+
+<p><img src="img/query_answer_sorted.png" alt="Query answer sorted" /></p></li>
+</ol>
+</li>
+<li>Click on <code>Create new dataset</code> to save this result. As before, please give the new dataset an informative <code>Name</code>, <code>Description</code>, and <code>Tags</code>. Always include the <code>geomics</code> tag. Then you can save the result and a new dataset will be created. You can see the result by clicking <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Protein_Function_Example">here</a>.</li>
+</ol>
+
+
+<h2>Joining datasets together</h2>
+
+<p>A common task (and indeed, one of the big features of SQLShare!) is merging data in different datasets together. Here is an example task from Jagruti Vedamati: <strong><em>I want to look at O2 data along with the total dissolved and particulate metals</em></strong>.</p>
+
+<ol>
+<li>Find the relevant datasets: Using the <code>Filter dataset by keyword</code> box described earlier, search for <code>O2</code> (to find the oxygen data) and <code>metals</code> (to find the metals data), and inspect the resulting datasets. Note that these searches work because these datasets have well-chosen names, descriptions, and tags. You should find:
+
+<ul>
+<li>Oxygen data: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_O2_measurements_final.csv">[fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv]</a></li>
+<li>Metals data: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv">[fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv]</a></li>
+</ul>
+</li>
+<li>Figure out how the two datasets can be matched up. Usually we want to take samples at the same <code>Station</code> and <code>Depth</code>, or <code>Event</code> when these are not available.</li>
+<li><p>The SQL command to merge datasets is called <code>JOIN</code>. It can be used as follows:</p>
+
+<pre><code>SELECT *
+FROM [fridayharboroceanographers@gmail.com].[V2_GEOMICS_Fe-Cu-Mn-Zn-Vedamati.csv] metals
+JOIN [fridayharboroceanographers@gmail.com].[V2_O2_measurements_final.csv] oxygen
+  ON (metals.[Station] = oxygen.[station]
+      AND metals.[Depth..m.] = oxygen.[Depth])
+</code></pre>
+
+There are a few interesting parts of this statement:
+
+<ol type="a">
+<li>In the previous example, we explicitly listed which columns we wanted (<code>Function_1</code> and <code>Spectra</code>). In this example, <code>SELECT *</code> means select all columns in both datasets.</li>
+<li>We can give the individual datasets a shorter name (<code>metals</code> and <code>oxygen</code> in this example) so that we don't have to type the full <code>[fridayharboroceanographers@gmail.com].[long_dataset_name]</code> every time.</li>
+<li>We say that we want to <code>JOIN</code> datasets <code>ON</code> a particular condition. In other words, we take the pairs of rows (one from the <code>metals</code> dataset and one from the <code>oxygen</code> dataset) where the <code>ON</code> condition is true.
+
+<ol>
+<li>In this case, we require them to match <strong>exactly</strong> in both <em>Station</em> (<code>metals.[Station] = oxygen.[station]</code>) and <em>Depth</em> (<code>metals.[Depth..m.] = oxygen.[Depth]</code>).</li>
+<li>Note that the column names are slightly different in the two datasets and thus our code uses the specific name for each dataset.</li>
+<li>If the <em>Depth</em> values did not match exactly between the two tables, we could instead join "close" samples, e.g., if "the depths are within 5 meters": <code>ABS(metals.[Depth..m.] - oxygen.[Depth]) &lt;= 5</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Once complete, save the dataset as in the previous example.</li>
+</ol>
+
+
+<p>You can see the joined Oxygen and Metals dataset here: <a href="https://sqlshare.escience.washington.edu/sqlshare#s=query/fridayharboroceanographers%40gmail.com/Metals_and_Oxygen">[fridayharboroceanographers@gmail.com].[Metals_and_Oxygen]</a>.</p>
+
+<h2>Troubleshooting</h2>
+
+<p>We will fill this in as the questions come.</p>
+
+<p>Please mail <a href="mailto:Daniel%20Halperin%20&lt;dhalperi@escience.washington.edu>">Daniel Halperin &lt;dhalperi@escience.washington.edu></a> when you have issues or successes! :)</p>
+</body>
+</html>
