@@ -1,0 +1,37 @@
+ul:first-of-type:not(.nav) li {
+    float: left;
+    width: 20%;
+    height: 200px;
+    margin: 1em;
+    list-style-type: none;
+    text-align: center;
+    font-style: italic;
+}
+
+ul:first-of-type li:first-letter {
+    font-size: 80px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    background: #5b2a7c;
+    color: #fff;
+    width: 100%;
+    display: block;
+    padding: 0 20px 0 20px;
+    border-radius: 4px;
+}
+
+ul:first-of-type:not(.nav) li a {
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'ProximaNova', 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    color: #5b2a7c;
+}
+
+ul:nth-of-type(2):not(.nav), h2 {
+    display: block;
+    clear: both;
+}

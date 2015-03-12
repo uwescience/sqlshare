@@ -1,0 +1,21 @@
+<li {% if page.id == 'tutorial' %}class="active"{% endif %}>
+  <a href="{{ site.baseurl }}/tutorial.html"><i class="fa fa-edit "></i> Tutorial</a>
+</li>
+
+<li {% if page.id == 'publications' %}class="active"{% endif %}>
+  <a href="{{ site.baseurl }}/publications.html"><i class="fa fa-book"></i> Publications</a>
+</li>
+
+<!--
+<li {% if page.id == 'develop' %}class="active"{% endif %}>
+  <a href="{{ site.baseurl }}/develop.html"><i class="fa fa-code"></i> Develop</a>
+</li>
+-->
+
+<li {% if page.id == 'usecases' %}class="active"{% endif %}>
+  <a href="{{ site.baseurl }}/usecases.html"><i class="fa fa-share-alt-square"></i> Use Cases and Info.</a>
+</li>
+
+<li {% if page.id == 'trysqlshare' %}class="active"{% endif %}>
+  <a href="https://sqlshare.escience.washington.edu/" target= "_blank"><i class="fa fa-cloud"></i> Try SQLShare!</a>
+</li>

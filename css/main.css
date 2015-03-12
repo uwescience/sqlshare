@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+html {
+  position: relative;
+  min-height: 99%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+p {
+	line-height: 1.5em;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+	margin-top: 30px;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+img.logo {
+	height: 32px;
+	margin-top: -6px;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #E7E7E7;
+  background: transparent;
+  background-position: center;
+  height: 400px;
+  background-color: #eee;
+  color: black;
+  margin-top: -21px;
+  padding-top: 114px;
+}
+
+.content {
+  padding-bottom: 40px;
+}
+
+.container .credit {
+    margin: 20px 0;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.thumbnail.with-caption {
+  display: inline-block;
+  background: #f5f5f5;
+}
+
+.thumbnail.with-caption p {
+  margin: 0;
+  padding-top: 0.5em;
+}
+
+.img-thumbnail { 
+  min-height:55px; 
+  height:55px;
+  margin-left: 15px;
+  margin-top: 15px;
+  border: 0 none;
+  /*box-shadow: none;*/ 
+}
+
+.flexcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+}
