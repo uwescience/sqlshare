@@ -63,6 +63,9 @@ We find that users frequently copy and paste snippets from other queries -- a pr
 This work is funded by the Gordon and Betty Moore foundation, NSF Award [1060213](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1060213) "Scalable Algebraic Visualization in the Cloud", and the University of Washington eScience Institute.
 
 <div height="50" class="flexcontainer">
+<a href="http://escience.washington.edu">
+    <img src="{{ site.baseurl}}/images/logo-eScience.png" class="img-thumbnail" style="min-height:70px; height:70px;">
+</a>
 <img src="{{ site.baseurl}}/images/logo-moore.png" class="img-thumbnail" style="min-height:70px; height:70px;">
 <img src="{{ site.baseurl}}/images/logo-nsf.jpeg" class="img-thumbnail" style="min-height:70px; height:70px;">
 </div>
