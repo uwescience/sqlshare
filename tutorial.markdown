@@ -17,7 +17,7 @@ ___________________________________________
 
 #### Upload data
 
-You can upload any file with character-separated values, e.g., .txt or .csv. Note: In SQLShare, a ***dataset*** refers to an SQL query, title, description, and output.
+You can upload any file with character-separated values, e.g., .txt or .csv.  
 
 * In the left sidebar menu, click **Upload dataset**.
 * Click **Select File**.
@@ -25,6 +25,7 @@ You can upload any file with character-separated values, e.g., .txt or .csv. Not
 * Edit the Import Settings as needed. For example, select the **Contains column header** checkbox, click a value in the **Values are separated by** drop down menu. When you are finished, click **Next**.
 * Optional: Change the **Title** and add a description for your dataset. To make the dataset public, select the **Share this dataset with everyone** checkbox. Click **Save** when finished.
 
+Note: In SQLShare, a ***dataset*** refers to a SQL query, title, description, and output. Its like a logical representation of question and answer being asked from the data.
 ____________________________________________
 
 #### Find an existing query
