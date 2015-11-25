@@ -16,7 +16,7 @@ Click the link below to download the zip file with all the necessary information
     * a folder 'data'
     * one file with all the queries
     * and another with script to create [views](https://msdn.microsoft.com/en-us/library/ms190174.aspx) necessary to run the queries in the corpus.
-* The 'data' folder has sub-folders for each user to provided consent to share their datasets. 
+* The 'data' folder has sub-folders for each user who provided consent to share their datasets. 
 * Create [schema](https://msdn.microsoft.com/en-us/library/ms189462.aspx) & user for each sub-folder in 'data'. (With the name same as the sub-folder name).
 * Each file in a user's sub-folder corresponds to a table that needs to be created in the context of that user. (The name of the table should be the same as the name of file corresponding to it)
 * Create all the views (datasets) as per the definitions in the 'view_script.txt'.
