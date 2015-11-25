@@ -19,3 +19,7 @@
 <li {% if page.id == 'trysqlshare' %}class="active"{% endif %}>
   <a href="https://sqlshare.escience.washington.edu/" target= "_blank"><i class="fa fa-cloud"></i> Try SQLShare!</a>
 </li>
+
+<li {% if page.id == 'datarelease' %}class="active"{% endif %}>
+  <a href="{{ site.baseurl }}/data_release.html"><i class="fa fa-cloud"></i>Data Release</a>
+</li>
