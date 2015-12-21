@@ -7,7 +7,8 @@ id: "datarelease"
 ______________________________________________
 ## Database Research on SQLShare Corpus
 
-In order to aid database research, we plan to periodically release the corpus of SQLShare queries and public datasets (for the consenting users only).
+In order to aid database research, we plan to periodically release the corpus of SQLShare queries and public datasets (for the consenting users only). If you plan on using this corpus, please cite the following work:
+
 
 Click the link below to download the zip file with all the necessary information.
 
