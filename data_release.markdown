@@ -26,3 +26,12 @@ Click the link below to download the zip file with all the necessary information
 ###[Data Release 1](https://s3-us-west-2.amazonaws.com/sqlsharedatarelease1/sqlshare_data_release1.zip)
 
 Some of the queries might not work anymore because the users either didn't give us permissions to release the accompanying datasets or they deleted it.
+
+###Acknowledgements
+We would like to acknowledge the following data scientists/researchers/departments for giving us permission to share these datasets:
+* Christopher Erdmann, Head Librarian, Harvard-Smithsonian Center for Astrophysics
+* Roger Rush, Portland State University
+* Lars Butzmann, Hasso Plattner Institute
+* beamreach.org
+* Rachael Tatman, Phd Student, NSF Graduate Research Fellow, Department of Linguistics, University of Washington
+* Chris T. Berthiaume, Biological Oceanography, University of Washington
