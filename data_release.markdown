@@ -31,9 +31,11 @@ Some of the queries might not work anymore because the users either didn't give 
 
 ###Acknowledgements
 We would like to acknowledge the following data scientists/researchers/departments for giving us permission to share these datasets:
+
 * Christopher Erdmann, Head Librarian, Harvard-Smithsonian Center for Astrophysics
 * Roger Rush, Portland State University
 * Lars Butzmann, Hasso Plattner Institute
+* Arushi Prakash, Graduate Student, Chemical Engineering, University of Washington
 * beamreach.org
 * Rachael Tatman, Phd Student, NSF Graduate Research Fellow, Department of Linguistics, University of Washington
 * Chris T. Berthiaume, Biological Oceanography, University of Washington
