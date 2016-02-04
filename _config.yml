@@ -1,4 +1,4 @@
 name: SQLShare
 markdown: redcarpet
-highlighter: pygments
+# highlighter: pygments
 baseurl: https://uwescience.github.io/sqlshare/

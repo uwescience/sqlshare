@@ -13,10 +13,11 @@ ______________________________________________
 ______________________________________________
 ## Some real world Use Cases
 
-* [Oceanographers meet to analyze data in real time with SQLShare](http://escience.washington.edu/blog/oceanographers-meet-analyze-data-real-time-sqlshare-0)
-* [Steven Roberts: Environmental Impact on Shellfish Gene Expression](http://escience.washington.edu/get-help-now/environmental-impact-shellfish-gene-expression)
-* [Virginia Armbrust: Handling Data Beyond the Scope of Spreadsheets](http://escience.washington.edu/get-help-now/data-management-beyond-spreadsheets)
-* [Robin Kodner: Using SQLShare to Analyze Genome Sequence Data from Marine Microbe Communities](http://escience.washington.edu/get-help-now/robin-kodner-using-sqlshare-analyze-genome-sequence-data-marine-microbe-communities)
+* Oceanographers meet to analyze data in real time with SQLShare
+* Steven Roberts: Environmental Impact on Shellfish Gene Expression
+* Virginia Armbrust: Handling Data Beyond the Scope of Spreadsheets
+* Robin Kodner: Using SQLShare to Analyze Genome Sequence Data from Marine Microbe Communities
+* Isabelle Phan: Using SQLShare for Seattle BioMed
 
 ______________________________________________
 
