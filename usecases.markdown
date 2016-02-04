@@ -28,6 +28,17 @@ If you use SQLShare in your research, please consider citing the following paper
 SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment, Shrainik Jain, Dominik Moritz, Daniel Halperin, Bill Howe, Ed Lazowska, In Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data.
 ```
 
+Bibtex:
+
+```
+@inproceedings{shrjainSQLShare,
+    key = {sqlshare},
+    author = {Jain, Shrainik and Moritz, Dominik and Howe, Bill and Halperin, Daniel and Lazowska, Ed},
+    Booktitle = {Proceedings of the 2016 ACM SIGMOD international conference on Management of data},
+    Title = {SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment},
+    Year = {2016}}
+```
+
 If appropriate, please also consider using the following acknowledgment:
 
 ```
