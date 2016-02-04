@@ -22,10 +22,10 @@ ______________________________________________
 ______________________________________________
 
 ## Acknowledging SQLShare
-If you use SQLShare in your research, please consider citing the following [paper](http://dl.acm.org/citation.cfm?id=2032436):
+If you use SQLShare in your research, please consider citing the following paper:
 
 ```
-Bill Howe, Garret Cole, Emad Souroush, Paraschos Koutris, Alicia Key, Nodira Khoussainova, and Leilani Battle. 2011. Database-as-a-service for long-tail science. In Proceedings of the 23rd international conference on Scientific and statistical database management (SSDBM'11), Judith Bayard Cushing, James French, and Shawn Bowers (Eds.). Springer-Verlag, Berlin, Heidelberg, 480-489.
+SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment, Shrainik Jain, Dominik Moritz, Daniel Halperin, Bill Howe, Ed Lazowska, In Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data.
 ```
 
 If appropriate, please also consider using the following acknowledgment:

@@ -7,7 +7,9 @@ id: "datarelease"
 ______________________________________________
 ## Database Research on SQLShare Corpus
 
-In order to aid database research, we plan to periodically release the corpus of SQLShare queries and public datasets (for the consenting users only).
+In order to aid database research, we plan to periodically release the corpus of SQLShare queries and public datasets (for the consenting users only). If you plan on using this corpus, please cite the following work:
+
+* *SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment, Shrainik Jain, Dominik Moritz, Daniel Halperin, Bill Howe, Ed Lazowska, In Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data. ([pdf](https://www.dropbox.com/s/835qvwhbclfuacw/paper.pdf?dl=0))*
 
 Click the link below to download the zip file with all the necessary information.
 
@@ -26,3 +28,14 @@ Click the link below to download the zip file with all the necessary information
 ###[Data Release 1](https://s3-us-west-2.amazonaws.com/sqlsharedatarelease1/sqlshare_data_release1.zip)
 
 Some of the queries might not work anymore because the users either didn't give us permissions to release the accompanying datasets or they deleted it.
+
+###Acknowledgements
+We would like to acknowledge the following data scientists/researchers/departments for giving us permission to share these datasets:
+
+* Christopher Erdmann, Head Librarian, Harvard-Smithsonian Center for Astrophysics
+* Roger Rush, Portland State University
+* Lars Butzmann, Hasso Plattner Institute
+* Arushi Prakash, Graduate Student, Chemical Engineering, University of Washington
+* beamreach.org
+* Rachael Tatman, Phd Student, NSF Graduate Research Fellow, Department of Linguistics, University of Washington
+* Chris T. Berthiaume, Biological Oceanography, University of Washington
