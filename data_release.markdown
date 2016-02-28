@@ -9,7 +9,7 @@ ______________________________________________
 
 In order to aid database research, we plan to periodically release the corpus of SQLShare queries and public datasets (for the consenting users only). If you plan on using this corpus, please cite the following work:
 
-* *SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment, Shrainik Jain, Dominik Moritz, Daniel Halperin, Bill Howe, Ed Lazowska, In Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data. ([pdf](https://www.dropbox.com/s/835qvwhbclfuacw/paper.pdf?dl=0))*
+* *SQLShare: Results from a Multi-Year SQL-as-a-Service Experiment, Shrainik Jain, Dominik Moritz, Daniel Halperin, Bill Howe, Ed Lazowska, In Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data. ([pdf](https://uwescience.github.io/sqlshare/pdfs/sqlshare_shrainik.pdf)*
 
 Click the link below to download the zip file with all the necessary information.
 
