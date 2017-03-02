@@ -1,0 +1,8 @@
+@inproceedings{halperin2013real,
+  title={Real-time collaborative analysis with (almost) pure SQL: a case study in biogeochemical oceanography},
+  author={Halperin, Daniel and Ribalet, Francois and Weitz, Konstantin and Saito, Mak A and Howe, Bill and Armbrust, E},
+  booktitle={Proceedings of the 25th International Conference on Scientific and Statistical Database Management},
+  pages={28},
+  year={2013},
+  organization={ACM}
+}
