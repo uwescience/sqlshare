@@ -1,0 +1,4 @@
+@article{howe2013sqlshare,
+  title={Sqlshare: Scientific workflow via relational view sharing},
+  author={Howe, Bill and Ribalet, Francois and Halperin, Daniel and Chitnis, Sagar and Armbrust, E Virginia}
+}
