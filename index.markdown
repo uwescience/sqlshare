@@ -60,7 +60,7 @@ The left sidebar of the SQLShare user interface contains the dataset palette. No
 We find that users frequently copy and paste snippets from other queries -- a predicate, a column expression, a subquery -- and paste them together to construct a new query. This workspace affords browsing and editing on the same screen.
 
 ## Acknowledgements
-This work is funded by the Gordon and Betty Moore foundation, NSF Award [1060213](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1060213) "Scalable Algebraic Visualization in the Cloud", and the University of Washington eScience Institute.
+This work is funded by the Gordon and Betty Moore foundation, NSF Award [1064505](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1064505) "Database-As-A-Service for Long Tail Science", and the University of Washington eScience Institute.
 
 <div height="50" class="flexcontainer">
 <a href="http://escience.washington.edu">

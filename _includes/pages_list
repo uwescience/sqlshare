@@ -17,7 +17,7 @@
 </li>
 
 <li {% if page.id == 'trysqlshare' %}class="active"{% endif %}>
-  <a href="https://sqlshare.escience.washington.edu/" target= "_blank"><i class="fa fa-cloud"></i> Try SQLShare!</a>
+  <a href="https://sqlshare.uw.edu" target= "_blank"><i class="fa fa-cloud"></i> Try SQLShare!</a>
 </li>
 
 <li {% if page.id == 'datarelease' %}class="active"{% endif %}>
