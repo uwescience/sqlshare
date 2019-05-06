@@ -17,7 +17,8 @@ In order to aid database research, we plan to periodically release the corpus of
 
 Click the link below to download the zip file with all the necessary information.
 
-####How to use this corpus:
+#### How to use this corpus:
+
 * After you unzip the file, you will find: 
     * a folder 'data'
     * one file with all the queries
@@ -29,11 +30,12 @@ Click the link below to download the zip file with all the necessary information
 * For any further information contact [Shrainik Jain](mailto:shrainik@cs.washington.edu).
 
 
-###[Data Release 1](https://s3-us-west-2.amazonaws.com/sqlsharedatarelease1/sqlshare_data_release1.zip)
+### [Data Release 1](https://s3-us-west-2.amazonaws.com/sqlsharedatarelease1/sqlshare_data_release1.zip)
 
 Some of the queries might not work anymore because the users either didn't give us permissions to release the accompanying datasets or they deleted it.
 
-###Acknowledgements
+### Acknowledgements
+
 We would like to acknowledge the following data scientists/researchers/departments for giving us permission to share these datasets:
 
 * Christopher Erdmann, Head Librarian, Harvard-Smithsonian Center for Astrophysics
