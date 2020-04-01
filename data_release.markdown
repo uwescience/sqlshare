@@ -30,7 +30,7 @@ Click the link below to download the zip file with all the necessary information
 * For any further information contact [Shrainik Jain](mailto:shrainik@cs.washington.edu).
 
 
-### [Data Release 1](https://s3-us-west-2.amazonaws.com/sqlsharedatarelease1/sqlshare_data_release1.zip)
+### [Data Release 1](https://shrquerylogs.s3-us-west-2.amazonaws.com/sqlshare_data_release1.zip)
 
 Some of the queries might not work anymore because the users either didn't give us permissions to release the accompanying datasets or they deleted it.
 
